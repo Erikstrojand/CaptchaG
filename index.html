@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <meta charset="UTF-8" />
+  <title>Captcha Speedrun Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Captcha Speedrun</h2>
+    <h3>How many Captchas can you finish in 100 seconds?</h3>
+    <canvas id="captcha" width="400" height="120"></canvas>
+    <input type="text" id="captcha-input" placeholder="Type what you see" />
+    <br>
+    <button onclick="submitCaptcha()">Submit</button>
+    <button onclick="refreshCaptcha()">⟳ Refresh</button>
+    <div class="stats">
+      Time: <span id="timer">100</span>s<br>
+      Score: <span id="score">0</span>
+    </div>
+    <div id="game-over"></div>
+    <div id="name-entry" style="display:none; margin-top: 20px; text-align: center;">
+      <label for="name-input" style="font-size: 18px;">Enter your name for the leaderboard:</label><br>
+      <input type="text" id="name-input" placeholder="Your name" maxlength="30" style="padding: 8px; font-size: 16px; margin: 10px;">
+      <button onclick="submitName()" style="padding: 8px 16px; font-size: 16px;">Submit</button>
+    </div>
+    <div id="leaderboard" style="display:none; margin-top: 20px;">
+      <h3>🏆 Leaderboard</h3>
+      <ol id="leaderboard-list" style="text-align: left;"></ol>
+    </div>
+  </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>

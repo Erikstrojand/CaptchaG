@@ -1,0 +1,118 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 300px;
+  width: 500px;
+  transform: scale(1.1);
+}
+
+
+canvas {
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  width: 100%;          /*make canvas responsive */
+  height: auto;
+}
+
+input {
+  padding: 8px;
+  width: 80%;
+  font-size: 16px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  transition: border 0.2s, transform 0.2s;
+}
+
+button {
+  padding: 8px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.stats {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+#game-over {
+  font-weight: bold;
+  margin-top: 20px;
+  color: #333;
+}
+
+/* Error state */
+input.error {
+  border: 2px solid red !important;
+  animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  50% { transform: translateX(4px); }
+  75% { transform: translateX(-4px); }
+  100% { transform: translateX(0); }
+}
+
+
+input.success {
+  border: 2px solid green !important;
+  animation: flash 0.3s ease-in-out;
+}
+
+@keyframes flash {
+  0%   { background-color: #e0ffe0; }
+  100% { background-color: white; }
+}
+
+
+
+button {
+  margin: 5px;
+}
+
+button:nth-child(3) {
+  background-color: #eee;
+}
+
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  overflow: hidden;
+  height: 100vh;
+  background: linear-gradient(270deg, #ff9a9e, #fad0c4, #a1c4fd, #c2e9fb);
+  background-size: 800% 800%;
+  animation: gradientMove 100s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+#leaderboard-list li {
+  padding: 10px;
+  border-bottom: 1px solid #99B1AF;
+  background: rgba(255, 255, 255, 0.6);
+  transition: background 0.3s ease;
+}
+
+#leaderboard-list li:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
